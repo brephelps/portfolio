@@ -54,7 +54,7 @@ p {
 }
 
 .about-container {
-  background: url('bg.jpg') no-repeat center center fixed; 
+  background-image: url('bg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -111,7 +111,9 @@ p {
   clear: both;
 }
 
-.language-ruby
+.language-ruby {
+  font-family: sans-serif;
+}
 
 .full-width {
   width: 100%;
