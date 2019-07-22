@@ -30,6 +30,14 @@ h1 {
   margin-left: 20px;
 }
 
+h1-a {
+  color: #b5b5b5;
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
 h2 {
   color: white;
   font-size: 18px;
@@ -61,6 +69,7 @@ p {
   background-size: cover;
   height: 600px;
 }
+
 .about {
   width: 400px;
   background-color: rgba(36, 32, 33, 0.50);
@@ -107,25 +116,46 @@ p {
   margin-top: 80px;
 }
 
+.box-s {
+  float: left;
+  width: 42.5%;
+  margin-left: 5%;
+  margin-top: 80px;
+  background-color: rgba(36, 32, 33, 0.50);
+}
+
 .clear {
   clear: both;
 }
 
 .language-ruby {
   font-family: sans-serif;
+  padding: 10px;
+  text-align: left;
 }
 
 .full-width {
   width: 100%;
 }
 
-.skills-and-tools {
-  max-width: 400px;
-  margin: 40px auto;
-}
-
 .icons {
   text-align: center;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background-color: rgba(255,255,255,0.88);
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+  width: 550px;
+  margin: 20px;
+}
+
+.skills-container {
+  background: image-url('bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 700px;
 }
 
 .icon {
@@ -179,4 +209,3 @@ li {
   border-color: black;
   padding-bottom: 2px;
 }
-
