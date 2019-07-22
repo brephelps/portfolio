@@ -21,228 +21,35 @@
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="#code-samples">Code Samples</a>
+          <li class="nav-item col-4">
+            <%= link_to "Code Samples", code_samples_path, { class: "nav-link" } %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#web-apps">Web Apps</a>
+          <li class="nav-item col-4">
+            <%= link_to "Web Apps", web_apps_path, { class: "nav-link" } %>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills-and-tools">Skills &amp; Tools</a>
+          <li class="nav-item col-4">
+            <%= link_to "Skills and Tools", skills_path, { class: "nav-link" } %>
           </li>
-          <li class="hire-me">
-            <a class="nav-link" href="#hire-me">Hire Me</a>
+          <li class="hire-me col-4 offset-1">
+            <%= link_to "Hire Me", contact_index_path, { class: "nav-link" } %>
           </li>
         </ul>
       </div>
     </nav>
+
     <div class="about-container">
       <br />
-      <div class="about offset-8">
-
-        <img src="me.jpg" class="me" />
-        <h1>Bre Phelps</h1>
-        <h2>IMPLEMENTATION AND DATABASE SPECIALIST</h2>
-        <hr class="grey" />
-        <p class="bio">
-          Bre currently has a hybrid position as an Implementation and Database Specialist at a software company in San Francisco. She is literate in several coding languages but is looking to acquire a more in depth knowledge. Previously, she lived in Texas and worked as a Technical Project Manager where she learned the basics of JavaScript and SQL. Before her tech life began, she worked in sales. It didn't take long for her to realize that she appreciates working with computers over humans. 
-        </p>
-      </div>
-    </div>
-    <h3 id="code-samples">Code Snippets</h3>
-    <hr class="yellow" />
-
-    <div class="box">
-      <h4>Temperature Conversion</h4>
-      <p>
-        This Ruby program will prompt the user for a temperature in degrees Celsius and let the user know what the corresponding temperature is in Fahrenheit.
-      </p>
-    </div>
-    <div class="box">
-<pre><code class="language-ruby">
-def degrees
-  puts &quot;Enter degrees in Celsius:&quot;
-  # Chomping new line character
-  # Converting to a float for calculation
-  celcius = gets.chomp.to_f
-
-  fahrenheit = celcius * 1.8 + 32
-
-  # Converting answer to integer for triggered method
-  return &quot;The temperature is #{fahrenheit.to_i} degrees Fahrenheit&quot;
-end
-puts degrees
-</code></pre>
-    </div>
-
-    <br class="clear" />
-    
-    <div class="box">
-<pre><code class="language-ruby">
-puts &quot;Enter a number.&quot;
-# Collect a number from user and convert to positive integer
-number = gets.chomp.to_i
-last_two = number.to_s[-2..-1].to_i
-
-# Lop off the right-most digit and store it in a variable
-right_digit = number % 10
-
-
-# Assign ordinal
-if right_digit == 0 &amp;&amp; number != 0
-    puts &quot;That's the #{number}th item!&quot;
-elsif right_digit == 1 &amp;&amp; (last_two &lt; 10 || last_two &gt; 20)
-    puts &quot;That's the #{number}st item!&quot;
-elsif right_digit == 2 &amp;&amp; (last_two &lt; 10 || last_two &gt; 20)
-    puts &quot;That's the #{number}nd item!&quot;
-elsif right_digit == 3 &amp;&amp; (last_two &lt; 10 || last_two &gt; 20)
-    puts &quot;That's the #{number}rd item!&quot;
-elsif number &lt;= 0
-    puts 'Please enter a number above 0'
-else
-    puts &quot;That's the #{number}th item!&quot;
-end
-</code></pre>
-      </div>
-    <div class="box">
-      <h4>Ordinal Challenge</h4>
-      <p>
-        This Ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
-      </p>
-    </div>
-
-    <br class="clear" />
-    
-    <div class="box">
-      <h4>Foobar</h4>
-      <p>
-        This Ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
-      </p>
-    </div>
-    <div class="box">
-<pre><code class="language-ruby">
-# Define method
-def chall3
-
-# Ask user to input digit and convert to int
-puts &quot;How many items do you want to see?&quot;
-digits = gets.chomp.to_i
-
-number = 0
-
-    # Create iterative loop
-    while number &lt; digits
-        number = number + 1
-        # Form if statements
-        if number % 15 == 0
-            puts &quot;Foobar&quot;
-        elsif number % 5 == 0
-            puts &quot;Bar&quot;
-        elsif number % 3 == 0
-            puts &quot;Foo&quot;
-        else
-            puts number
-        end
-    end
-end
-
-# Call method
-chall3
-</code></pre>
-    </div>
-
-    <br class="clear" />
-
-    <h3 id="web-apps">Web Apps</h3>
-    <hr class="yellow" />
-
-    <div class="box">
-        <h4>Quote Generator</h4>
-        <img src="splurty.png" class="full-width" />
-        <p>
-      A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
+        <div class="about float-right">
+          <%= image_tag ("me.jpg"), class: "me" %>
+          <h1>Bre Phelps</h1>
+          <h2>IMPLEMENTATION AND DATABASE SPECIALIST</h2>
+          <hr class="grey" />
+          <p class="bio">
+            Bre currently has a hybrid position as an Implementation and Database Specialist at a software company in San Francisco. She is literate in several coding languages but is looking to acquire a more in depth knowledge. Previously, she lived in Texas and worked as a Technical Project Manager where she learned the basics of JavaScript and SQL. Before her tech life began, she worked in sales. It didn't take long for her to realize that she appreciates working with computers over humans. 
           </p>
-      </div>
-      <br class="clear" />
-    <div class="box">
-      <h4>Yelp Clone</h4>
-      <img src="nomster.png" class="full-width" />
-      <p>
-      A Yelp clone that integrates with the Google Maps API
-      and includes features like user comments, star ratings,
-      image uploading, and user authentication.
-      </p>
-    </div>
-    <br class="clear" />
-
-    <div class="box">
-      <h4>Two-Sided Market Place</h4>
-      <img src="flixter.png" class="full-width" />
-      <p>
-      A two-sided, video-streaming marketplace platform that
-      features credit card payment capabilities, user role
-      management, complex user interfaces, and advanced
-      database relationships.
-      </p>
-    </div>
-    <br class="clear" />
-    <div class="box">
-      <h4>Test Driven Development</h4>
-      <img src="grammable.png" class="full-width" />
-      <p>
-      An Instagram clone that was built using industry-standard, test-driven
-      development following numerous red/green/refactor cycles.
-      </p>
-    </div>
-    <br class="clear" />
-    <div class="box">
-      <h4>Single Page Todo Application</h4>
-      <img src="todoster.png" class="full-width" />
-      <p>
-      This single-page to-do application features a
-      fluid user interface that– by using JavaScript–
-      allows users to rapidly add dynamic content.
-      </p>
-    </div>
-    <br class="clear" />
-    <div class="box">
-      <h4>Agile Team Project</h4>
-      <img src="chess.png" class="full-width" />
-      <p>
-      Worked on an Agile software development team building
-      a chess application. Under the guidance of a senior software engineer,
-      we had weekly Agile team meetings for code reviews, sprint planning,
-      and feature assignments.
-      </p>
-    </div>
-    <br class="clear" />
-    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
-    <hr class="yellow" />
-    <p class="skills-and-tools">
-      Bre has developed proficiency and expertise in the following programming languages and comfort with the following tools.
-    </p>
-    <div class="icons">
-      <img src="github.png" class="icon" />
-      <img src="rubocop.png" class="icon" />
-        <img src="trello.png" class="icon" />
-        <img src="slack.png" class="icon" />
-        <img src="codeship.png" class="icon" />
-
-        <br class="clear" />
-        <img src="skills.png" class="icon" />
-    </div>
-    <div class="contact-me">
-      <h3 class="contact-headline" id="hire-me">Contact</h3>
-      <hr class="yellow" />
-      <p class="contact-info">
-            Currently entertaining new opportunities. 
-            Please get in touch via email: 
-        </p>
-        <p>
-            <a href="mailto:bphelps@live.com" class="contact-link">
-              bphelps@live.com</a>
-          </p>
-    </div>
+        </div>
+    </div>    
+    
   </body>
 
 </html>

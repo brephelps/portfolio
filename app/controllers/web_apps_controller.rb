@@ -1,0 +1,2 @@
+class WebAppsController < ApplicationController
+end
