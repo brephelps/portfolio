@@ -70,6 +70,22 @@ p {
   text-align: center;
 }
 
+/* Create two columns that floats next to each other */
+.column1 {
+    float: left;
+}
+
+.column2 {
+    float: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .about-container {
   background: image-url('bg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -135,6 +151,16 @@ p {
   float: left;
   width: 42.5%;
   margin-left: 5%;
+  margin-top: 80px;
+  text-align: center;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background-color: rgba(255,255,255,0.88);
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  padding: 20px;
+}
+
+.box-w {
   margin-top: 80px;
   text-align: center;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -215,7 +241,7 @@ p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 700px;
+  height: 1400px;
 }
 
 .icon {
