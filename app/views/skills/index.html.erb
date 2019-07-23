@@ -20,14 +20,14 @@
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item col-3">
+          <li class="nav-item col-4">
             <%= link_to "About", root_path, { class: "nav-link" } %>
           </li>
           <li class="nav-item col-4">
-            <%= link_to "Web Apps", web_apps_path, { class: "nav-link" } %>
+            <%= link_to "Code Samples", code_samples_path, { class: "nav-link" } %>
           </li>
-          <li class="nav-item col-5">
-            <%= link_to "Skills and Tools", skills_path, { class: "nav-link" } %>
+          <li class="nav-item col-4">
+            <%= link_to "Web Apps", web_apps_path, { class: "nav-link" } %>
           </li>
           <li class="hire-me col-4 offset-1">
             <%= link_to "Hire Me", contact_index_path, { class: "nav-link" } %>
@@ -36,12 +36,14 @@
       </div>
     </nav> 
 
-    <br class="clear" />
     <div class="skills-container">
       <br />
       <div class="icons float-left">
         <h1-a>Skills and Tools</h-a>
-        <hr class="grey" />
+          <hr class="grey" />
+          <p class="skills-and-tools">
+            Bre has developed proficiency and expertise in the following programming languages and comfort with the following tools.
+          </p>
           <%= image_tag ("github.png"), class: "icon" %>
           <%= image_tag ("rubocop.png"), class: "icon" %>
           <%= image_tag ("trello.png"), class: "icon" %>

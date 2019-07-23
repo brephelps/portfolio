@@ -17,18 +17,38 @@
   </head>
 
   <body>    
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item col-4">
+            <%= link_to "About", root_path, { class: "nav-link" } %>
+          </li>
+          <li class="nav-item col-4">
+            <%= link_to "Code Samples", code_samples_path, { class: "nav-link" } %>
+          </li>
+          <li class="nav-item col-4">
+            <%= link_to "Web Apps", web_apps_path, { class: "nav-link" } %>
+          </li>
+          <li class="nav-item col-4">
+            <%= link_to "Skills and Tools", skills_path, { class: "nav-link" } %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
 
     <div class="contact-me">
-      <h3 class="contact-headline" id="hire-me">Contact</h3>
-      <hr class="yellow" />
-      <p class="contact-info">
-            Currently entertaining new opportunities. 
-            Please get in touch via email: 
+      <div class="contact float-right">
+        <h1-b>Contact</h1-b>
+        <hr class="grey" />
+        <p class="contact-info">
+          Currently entertaining new opportunities. 
+          Please get in touch via email: 
         </p>
         <p>
-            <a href="mailto:bphelps@live.com" class="contact-link">
-              bphelps@live.com</a>
-          </p>
+          <a href="mailto:bphelps@live.com" class="contact-link">
+            bphelps@live.com</a>
+        </p>
     </div>
   </body>
 </html>
