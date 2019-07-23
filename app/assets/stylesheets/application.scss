@@ -84,6 +84,7 @@ p {
     content: "";
     display: table;
     clear: both;
+    margin-top: 10px;
 }
 
 .about-container {
@@ -101,6 +102,10 @@ p {
   padding: 10px;
   margin: 20px;
   text-align: left;
+}
+
+.margin {
+  margin-top: 10px;
 }
 
 .contact {
