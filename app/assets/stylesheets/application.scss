@@ -84,7 +84,6 @@ p {
     content: "";
     display: table;
     clear: both;
-    margin-top: 10px;
 }
 
 .about-container {
@@ -112,6 +111,7 @@ p {
   width: 400px;
   background-color: rgba(36, 32, 33, 0.50);
   padding: 10px;
+  padding-bottom: 20px;
   margin: 20px;
   text-align: center;
 }
@@ -302,4 +302,9 @@ li {
   border-style: solid;
   border-color: black;
   padding-bottom: 2px;
+}
+
+.modal-body{
+  background-color: #C0C0C0;
+  text-align: left;
 }

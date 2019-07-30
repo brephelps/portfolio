@@ -13,6 +13,7 @@ class HomesController < ApplicationController
   end
 
   def contact
+    @contact = Contact.new
   end
 
 end

@@ -1,60 +1,45 @@
-<html>
-  <head>
-
-  <link rel="stylesheet" type="text/css" href="style.css">  
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="prism-atom-dark.css" type="text/css" media="screen" />
-  <script type="text/javascript" src="prism.js"></script>
-  <script type="text/javascript" src="prism.ruby.js"></script>
-
-  <title>Bre Phelps</title>
-  <meta name="description" content="Bre Phelps is a professional
-        software engineer specializing in full-stack development.
-        She has extensive experience with Ruby, Rails, JavaScript,
-        and building web applications.">
-
-  </head>
-
-  <body>    
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item col-3">
-            <%= link_to "About", root_path, { class: "nav-link" } %>
-          </li>
-          <li class="nav-item col-3">
-            <%= link_to "Code Samples", code_samples_path, { class: "nav-link" } %>
-          </li>
-          <li class="nav-item col-3">
-            <%= link_to "Web Apps", web_apps_path, { class: "nav-link" } %>
-          </li>
-          <li class="nav-item col-4">
-            <%= link_to "Skills and Tools", skills_path, { class: "nav-link" } %>
-          </li>
-          <li class="hire-me col-3 offset-1">
-            <%= link_to "Hire Me", contact_path, { class: "nav-link" } %>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  
+<div class="contact-me">
+  <div class="margin">
+    <div class="contact float-right">
+      <h1-b>Contact</h1-b>
+      <hr class="grey" />
+      <p class="contact-info">
+        Currently entertaining new opportunities. 
+      </p>
 
 
-    <div class="contact-me">
-      <div class="margin">
-        <div class="contact float-right">
-          <h1-b>Contact</h1-b>
-          <hr class="grey" />
-          <p class="contact-info">
-            Currently entertaining new opportunities. 
-            Please get in touch via email: 
-          </p>
-          <p>
-            <a href="mailto:bphelps@live.com" class="contact-link">
-              bphelps@live.com</a>
-          </p>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-inverse btn-sm" data-toggle="modal" data-target="#ContactModal">
+        Add a Contact Request Here
+      </button>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="ContactModal" tabindex="-1" role="dialog" aria-labelledby="ContactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+              <h4 class="modal-title" id="ContactModalLabel">Add a Contact Request</h4>
+            </div>
+            <%= simple_form_for @contact do |f| %>
+              <div class="modal-body">
+                <%= f.input :name %>
+                <%= f.input :email %>
+                <%= f.input :phone_number %>
+                <%= f.input :message %>
+              </div>
+              <div class="modal-body">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <%= f.submit "Add Contact Request", class: 'btn btn-secondary' %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>

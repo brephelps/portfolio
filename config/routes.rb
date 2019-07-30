@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'web_apps', to:'homes#web_apps'
   get 'skills', to: 'homes#skills'
   get 'contact', to: 'homes#contact'
+  resources :contacts, only: [:create, :show]
+  get '/contacts/:id', to: 'contacts#show', as: 'contacts_show'
 end

@@ -1,123 +1,80 @@
-<html>
-  <head>
-
-    <link rel="stylesheet" type="text/css" href="style.css">  
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="prism-atom-dark.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="prism.js"></script>
-    <script type="text/javascript" src="prism.ruby.js"></script>
-
-    <title>Bre Phelps</title>
-    <meta name="description" content="Bre Phelps is a professional
-          software engineer specializing in full-stack development.
-          She has extensive experience with Ruby, Rails, JavaScript,
-          and building web applications.">
-
-  </head>
-
-  <body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item col-3">
-            <%= link_to "About", root_path, { class: "nav-link" } %>
-          </li>
-          <li class="nav-item col-3">
-            <%= link_to "Code Samples", code_samples_path, { class: "nav-link" } %>
-          </li>
-          <li class="nav-item col-3">
-            <%= link_to "Web Apps", web_apps_path, { class: "nav-link" } %>
-          </li>
-          <li class="nav-item col-4">
-            <%= link_to "Skills and Tools", skills_path, { class: "nav-link" } %>
-          </li>
-          <li class="hire-me col-3 offset-1">
-            <%= link_to "Hire Me", contact_path, { class: "nav-link" } %>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="apps-container">
-      <div class="margin">
-        <div class="row">
-          <div class="column1 col-lg-4 offset-1">
-            <div class="box-w">
-              <h4>Quote Generator</h4>
-              <%= image_tag ("splurty.png"), class: "full-width" %>
-              <br />
-              <p>
-                A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
-              </p>
-            </div>
-              <br/>
-
-            <div class="box-w">
-              <h4>Yelp Clone</h4>
-              <%= image_tag ("nomster.png"), class: "full-width" %>
-              <br />
-              <p>
-              A Yelp clone that integrates with the Google Maps API
-              and includes features like user comments, star ratings,
-              image uploading, and user authentication.
-              </p>
-            </div>
-            <br />
-
-            <div class="box-w">
-              <h4>Two-Sided Market Place</h4>
-              <%= image_tag ("flixter.png"), class: "full-width" %>
-              <br />
-              <p>
-              A two-sided, video-streaming marketplace platform that
-              features credit card payment capabilities, user role
-              management, complex user interfaces, and advanced
-              database relationships.
-              </p>
-            </div>
-            <br />
-          </div>
-
-          <div class="column2 col-lg-4 offset-1">
-            <div class="box-w">
-              <h4>Test Driven Development</h4>
-              <%= image_tag ("grammable.png"), class: "full-width" %>
-              <br />
-              <p>
-              An Instagram clone that was built using industry-standard, test-driven
-              development following numerous red/green/refactor cycles.
-              </p>
-            </div>
-            <br />
-
-            <div class="box-w">
-              <h4>Single Page Todo Application</h4>
-              <%= image_tag ("todoster.png"), class: "full-width" %>
-              <br />
-              <p>
-              This single-page to-do application features a
-              fluid user interface that– by using JavaScript–
-              allows users to rapidly add dynamic content.
-              </p>
-            </div>
-            <br />
-
-            <div class="box-w">
-              <h4>Agile Team Project</h4>
-              <%= image_tag ("chess.png"), class: "full-width" %>
-              <br />
-              <p>
-              Worked on an Agile software development team building
-              a chess application. Under the guidance of a senior software engineer,
-              we had weekly Agile team meetings for code reviews, sprint planning,
-              and feature assignments.
-              </p>
-            </div>
-            <br />
-          </div>
+<div class="apps-container">
+  <div class="margin">
+    <div class="row">
+      <div class="column1 col-lg-4 offset-1">
+        <div class="box-w">
+          <h4>Quote Generator</h4>
+          <%= image_tag ("splurty.png"), class: "full-width" %>
+          <br />
+          <p>
+            A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
+          </p>
         </div>
-      </div>    
+          <br/>
+
+        <div class="box-w">
+          <h4>Yelp Clone</h4>
+          <%= image_tag ("nomster.png"), class: "full-width" %>
+          <br />
+          <p>
+          A Yelp clone that integrates with the Google Maps API
+          and includes features like user comments, star ratings,
+          image uploading, and user authentication.
+          </p>
+        </div>
+        <br />
+
+        <div class="box-w">
+          <h4>Two-Sided Market Place</h4>
+          <%= image_tag ("flixter.png"), class: "full-width" %>
+          <br />
+          <p>
+          A two-sided, video-streaming marketplace platform that
+          features credit card payment capabilities, user role
+          management, complex user interfaces, and advanced
+          database relationships.
+          </p>
+        </div>
+        <br />
+      </div>
+
+      <div class="column2 col-lg-4 offset-1">
+        <div class="box-w">
+          <h4>Test Driven Development</h4>
+          <%= image_tag ("grammable.png"), class: "full-width" %>
+          <br />
+          <p>
+          An Instagram clone that was built using industry-standard, test-driven
+          development following numerous red/green/refactor cycles.
+          </p>
+        </div>
+        <br />
+
+        <div class="box-w">
+          <h4>Single Page Todo Application</h4>
+          <%= image_tag ("todoster.png"), class: "full-width" %>
+          <br />
+          <p>
+          This single-page to-do application features a
+          fluid user interface that– by using JavaScript–
+          allows users to rapidly add dynamic content.
+          </p>
+        </div>
+        <br />
+
+        <div class="box-w">
+          <h4>Agile Team Project</h4>
+          <%= image_tag ("chess.png"), class: "full-width" %>
+          <br />
+          <p>
+          Worked on an Agile software development team building
+          a chess application. Under the guidance of a senior software engineer,
+          we had weekly Agile team meetings for code reviews, sprint planning,
+          and feature assignments.
+          </p>
+        </div>
+        <br />
+      </div>
     </div>
-  </body>
-</html>
+  </div>    
+</div>
